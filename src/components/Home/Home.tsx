@@ -3,7 +3,7 @@ import photocard from "../../assets/casey-koh-photocard.jpg";
 const Home = () => {
   return (
     <div className="font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
-      <section className="max-w-md my-11 flex justify-between flex-col">
+      <section className="max-w-md my-11 flex justify-between flex-col sticky top-0">
         <div className="border-t-2 border-gray-50 text-base pt-4">
           <p className="text-gray-50 mr-8">
             Former tattoo artist, turned web developer based in Toronto -

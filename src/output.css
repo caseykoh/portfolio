@@ -4,6 +4,7 @@
 @tailwind utilities;
 
 /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
   /* all: unset; */
   display: revert;
@@ -19,6 +20,7 @@ body {
 }
 
 /* Preferred box-sizing value */
+
 *,
 *::before,
 *::after {
@@ -29,26 +31,26 @@ body {
     Remove list styles (bullets/numbers)
     in case you use it with normalize.css
   */
+
 ol,
 ul {
   list-style: none;
 }
 
 /* For images to not be able to exceed their container */
+
 img {
   max-width: 100%;
 }
 
 /* Removes spacing between cells in tables */
+
 table {
   border-collapse: collapse;
 }
 
 /* Revert the 'white-space' property for textarea elements on Safari */
+
 textarea {
   white-space: revert;
-}
-
-@-ms-viewport {
-  width: device-width;
 }

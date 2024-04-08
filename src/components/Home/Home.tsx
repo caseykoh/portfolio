@@ -1,4 +1,5 @@
 import photocard from "../../assets/casey-koh-photocard.jpg";
+import proxii_world_preview from "../../assets/proxii_world.png";
 
 const Home = () => {
   return (
@@ -50,7 +51,19 @@ const Home = () => {
           <h1 className="text-6xl font-medium">Casey Koh</h1>
         </div>
       </section>
-      <section></section>
+      <section className="rounded-3xl bg-gray-950 top-56">
+        <h2 className="text-4xl">Selected Work</h2>
+        <img
+          className="rounded-3xl"
+          src={proxii_world_preview}
+          alt="proxii_world"
+        />
+        <h3>proxii_world</h3>
+        <p>
+          Showcasing a unique artist's voice through brutalist style booking
+          site.
+        </p>
+      </section>
     </div>
   );
 };

@@ -3,8 +3,8 @@ import proxii_world_preview from "../../assets/proxii_world.png";
 
 const Home = () => {
   return (
-    <div className="font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
-      <section className="max-w-md my-11 flex justify-between flex-col sticky top-0">
+    <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
+      <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-between flex-col sticky top-0">
         <div className="border-t-2 border-gray-50 text-base pt-4">
           <p className="text-gray-50 mr-8">
             Former tattoo artist, turned web developer based in Toronto -
@@ -51,18 +51,36 @@ const Home = () => {
           <h1 className="text-6xl font-medium">Casey Koh</h1>
         </div>
       </section>
-      <section className="rounded-3xl bg-gray-950 top-56">
+      <section className="mt-56 px-14 py-9 rounded-2xl bg-gray-950 top-56">
         <h2 className="text-4xl">Selected Work</h2>
-        <img
-          className="rounded-3xl"
-          src={proxii_world_preview}
-          alt="proxii_world"
-        />
-        <h3>proxii_world</h3>
-        <p>
-          Showcasing a unique artist's voice through brutalist style booking
-          site.
-        </p>
+        <div className="mt-9 mb-12">
+          <img
+            className="rounded-3xl cursor-pointer"
+            src={proxii_world_preview}
+            alt="proxii_world"
+          />
+          <div className="my-8">
+            <h3 className="font-bold text-lg">proxii_world</h3>
+            <p className="text-gray-500">
+              Showcasing a unique artist's voice through brutalist style booking
+              site.
+            </p>
+          </div>
+        </div>
+        <div className="mt-9 mb-12">
+          <img
+            className="rounded-3xl cursor-pointer"
+            src={proxii_world_preview}
+            alt="proxii_world"
+          />
+          <div className="my-8">
+            <h3 className="font-bold text-lg">proxii_world</h3>
+            <p className="text-gray-500">
+              Showcasing a unique artist's voice through brutalist style booking
+              site.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
   );

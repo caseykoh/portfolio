@@ -45,7 +45,7 @@ const Home = () => {
         </div>
         <div>
           <img
-            className="max-h-52 rounded-2xl"
+            className="max-h-52 rounded-2xl mb-3"
             src={photocard}
             alt="Casey Koh Photo"
           />

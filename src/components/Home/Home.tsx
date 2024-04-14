@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
+import uiux_preview from "../../assets/uiux.png";
 
 const Home = () => {
   return (
@@ -71,22 +71,20 @@ const Home = () => {
           </div>
         </div>
         <div className="mt-9 mb-12">
-          <a href="https://proxiiworld.netlify.app/">
+          <a href="https://caseykoh.webflow.io/">
             <img
               className="rounded-3xl cursor-pointer"
-              src={proxii_world_preview}
-              alt="proxii_world"
+              src={uiux_preview}
+              alt="UI/UX Work"
             />
           </a>
           <div className="my-8">
-            <h3 className="font-bold text-lg">proxii_world</h3>
-            <p className="text-gray-500">
-              Showcasing a unique artist's voice through brutalist style booking
-              site.
-            </p>
+            <h3 className="font-bold text-lg">UI/UX Work</h3>
+            <p className="text-gray-500">Internship and portfolio work.</p>
           </div>
         </div>
       </section>
+      <a>s.casey.koh@gmail.com</a>
     </div>
   );
 };

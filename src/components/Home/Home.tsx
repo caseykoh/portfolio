@@ -52,39 +52,44 @@ const Home = () => {
           <h1 className="text-6xl font-medium">Casey Koh</h1>
         </div>
       </section>
-      <section className="mt-56 px-14 py-9 rounded-2xl bg-gray-950 top-56">
-        <h2 className="text-4xl">Selected Work</h2>
-        <div className="mt-9 mb-12">
-          <a href="https://proxiiworld.netlify.app/">
-            <img
-              className="rounded-3xl cursor-pointer"
-              src={proxii_world_preview}
-              alt="proxii_world"
-            />
-          </a>
-          <div className="my-8">
-            <h3 className="font-bold text-lg">proxii_world</h3>
-            <p className="text-gray-500">
-              Showcasing a unique artist's voice through brutalist style booking
-              site.
-            </p>
+      <div>
+        <section className="mt-56 mb-14 px-14 py-9 rounded-2xl bg-gray-950 top-56">
+          <h2 className="text-4xl">Selected Work</h2>
+          <div className="mt-9 mb-12">
+            <a href="https://proxiiworld.netlify.app/">
+              <img
+                className="rounded-3xl cursor-pointer"
+                src={proxii_world_preview}
+                alt="proxii_world"
+              />
+            </a>
+            <div className="my-8">
+              <h3 className="font-bold text-lg">proxii_world</h3>
+              <p className="text-gray-500">
+                Showcasing a unique artist's voice through brutalist style
+                booking site.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="mt-9 mb-12">
-          <a href="https://caseykoh.webflow.io/">
-            <img
-              className="rounded-3xl cursor-pointer"
-              src={uiux_preview}
-              alt="UI/UX Work"
-            />
-          </a>
-          <div className="my-8">
-            <h3 className="font-bold text-lg">UI/UX Work</h3>
-            <p className="text-gray-500">Internship and portfolio work.</p>
+          <div className="mt-9 mb-12">
+            <a href="https://caseykoh.webflow.io/">
+              <img
+                className="rounded-3xl cursor-pointer"
+                src={uiux_preview}
+                alt="UI/UX Work"
+              />
+            </a>
+            <div className="my-8">
+              <h3 className="font-bold text-lg">UI/UX Work</h3>
+              <p className="text-gray-500">Internship and portfolio work.</p>
+            </div>
           </div>
+        </section>
+        <div className="mt-32 mb-12 text-right text-4xl">
+          <span>Contact @ </span>
+          <a className="underline cursor-pointer">s.casey.koh@gmail.com</a>
         </div>
-      </section>
-      <a>s.casey.koh@gmail.com</a>
+      </div>
     </div>
   );
 };

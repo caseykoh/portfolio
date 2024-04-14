@@ -54,7 +54,10 @@ const Home = () => {
       </section>
       <div>
         <section className="mt-56 mb-14 px-14 py-9 rounded-2xl bg-gray-950 top-56">
-          <h2 className="text-4xl">Selected Work</h2>
+          <div className="inline-block">
+            <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
+            <p className="inline-block align-top ms-1">&#40;2&#41;</p>
+          </div>
           <div className="mt-9 mb-12">
             <a href="https://proxiiworld.netlify.app/">
               <img

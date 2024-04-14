@@ -6,7 +6,7 @@ import resume from "../../assets/caseykoh.pdf";
 const Home = () => {
   return (
     <>
-      <div className="z-50 fixed top-0 w-full py-11 px-16 text-gray-50 text-right text-large bg-gradient-to-b from-gray-950 to-transparent">
+      <div className="fixed top-0 w-full py-11 px-16 text-gray-50 text-right text-large bg-gradient-to-b from-gray-950 to-transparent">
         <a href={resume} target="_blank" className="text-lg px-6">
           Resume
         </a>

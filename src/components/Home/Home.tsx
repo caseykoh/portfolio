@@ -1,23 +1,12 @@
 import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
 import uiux_preview from "../../assets/uiux.png";
-import resume from "../../assets/caseykoh.pdf";
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
     <>
-      <div className="fixed top-0 w-full py-11 px-16 text-gray-50 text-right text-large bg-gradient-to-b from-gray-950 to-transparent">
-        <a href={resume} target="_blank" className="text-lg px-6">
-          Resume
-        </a>
-        <a
-          href="mailto:s.casey.koh@gmail.com"
-          target="_blank"
-          className="text-lg px-6"
-        >
-          Email
-        </a>
-      </div>
+      <Navbar />
       <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
         <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-between flex-col sticky top-0">
           <div className="border-t-2 border-gray-50 text-base pt-4">

@@ -9,11 +9,13 @@ const Home = () => {
       <Navbar />
       <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
         <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-between flex-col sticky top-0">
-          <div className="border-t-2 border-gray-50 text-base pt-4">
-            <p className="text-gray-50 mr-8">
-              Former tattoo artist, turned web developer based in Toronto -
-              reclaiming the modern website as her medium of choice.
-            </p>
+          <div>
+            <img
+              className="max-h-52 rounded-2xl mb-3"
+              src={photocard}
+              alt="Casey Koh Photo"
+            />
+            <h1 className="text-6xl font-medium">Casey Koh</h1>
           </div>
           <div>
             <ol className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm">
@@ -45,14 +47,6 @@ const Home = () => {
                 </p>
               </li>
             </ol>
-          </div>
-          <div>
-            <img
-              className="max-h-52 rounded-2xl mb-3"
-              src={photocard}
-              alt="Casey Koh Photo"
-            />
-            <h1 className="text-6xl font-medium">Casey Koh</h1>
           </div>
         </section>
         <div>

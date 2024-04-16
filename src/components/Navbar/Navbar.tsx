@@ -1,4 +1,5 @@
 import resume from "../../assets/caseykoh.pdf";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (

@@ -2,8 +2,32 @@ import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
 import uiux_preview from "../../assets/uiux.png";
 import Navbar from "../Navbar/Navbar";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+
+gsap.registerPlugin(useGSAP);
 
 const Home = () => {
+  // const tl = useRef();
+
+  // const toggleTimeline = () => {
+  //   tl.current.reversed(!tl.current.reversed());
+  // };
+
+  // useGSAP(
+  //   () => {
+  //     const boxes = gsap.utils.toArray(".box");
+  //     tl.current = gsap
+  //       .timeline()
+  //       .to(boxes[0], { x: 120, rotation: 360 })
+  //       .to(boxes[1], { x: -120, rotation: -360 }, "<")
+  //       .to(boxes[2], { y: -166 })
+  //       .reverse();
+  //   },
+  //   { scope: container }
+  // );
+
   return (
     <>
       <Navbar />

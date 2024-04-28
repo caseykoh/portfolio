@@ -1,0 +1,11 @@
+.navbar-style {
+  animation: stickyNav linear forwards;
+  animation-timeline: view();
+}
+
+@keyframes stickyNav {
+  100% {
+    /* box-shadow: 0 0 0.75rem hsl(0 0% 0% / 0.3); */
+    box-shadow: 3px 3px 3px white;
+  }
+}

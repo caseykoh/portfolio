@@ -2,9 +2,9 @@ import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
 import uiux_preview from "../../assets/uiux.png";
 import Navbar from "../Navbar/Navbar";
-import { useRef } from "react";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -32,8 +32,8 @@ const Home = () => {
     <>
       <Navbar />
       <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
-        <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-between flex-col sticky top-0">
-          <div>
+        <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-start flex-col sticky top-0">
+          <div className="mb-8">
             <img
               className="max-h-52 rounded-2xl mb-3"
               src={photocard}
@@ -41,11 +41,8 @@ const Home = () => {
             />
             <h1 className="text-6xl font-medium">Casey Koh</h1>
           </div>
-          <div>
-            <ol
-              ref={container}
-              className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm"
-            >
+          <div className="ml-4">
+            <ol ref={container} className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm">
               <li className="mb-3 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">

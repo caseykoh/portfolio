@@ -9,20 +9,29 @@ import { useRef } from "react";
 gsap.registerPlugin(useGSAP);
 
 const Home = () => {
+  const bio = useRef();
   const container = useRef();
+  const timeline = useRef();
   const work = useRef();
 
   useGSAP(
     () => {
       let tl = gsap.timeline();
-      // gsap code here...
-      tl.from("li", { opacity: 0, stagger: 1.2 }); // <-- automatically reverted
+      tl.from(bio.current!, {
+        duration: 2,
+        ease: "power3.out",
+        opacity: 0,
+        delay: 0.5,
+        y: -100,
+      });
+      tl.from(timeline.current!, { duration: 3.6, scaleY: 0 });
+      tl.from("li", { opacity: 0, stagger: 1.2 }, "<"); // <-- automatically reverted
       tl.from(work.current!, {
         duration: 2.5,
         ease: "power3.out",
         opacity: 0,
         y: 200,
-        delay: 1,
+        delay: 0.5,
       });
     },
     { scope: container }
@@ -33,7 +42,7 @@ const Home = () => {
       <Navbar />
       <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
         <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-start flex-col sticky top-0">
-          <div className="mb-8">
+          <div ref={bio} className="mb-8">
             <img
               className="max-h-52 rounded-2xl mb-3"
               src={photocard}
@@ -41,8 +50,12 @@ const Home = () => {
             />
             <h1 className="text-6xl font-medium">Casey Koh</h1>
           </div>
-          <div className="ml-4">
-            <ol ref={container} className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm">
+          <div className="ml-4 inline-flex">
+            <div
+              ref={timeline}
+              className="w-px h-full max-w-px bg-gray-700 origin-top"
+            ></div>
+            <ol ref={container} className="relative max-w-sm">
               <li className="mb-3 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">

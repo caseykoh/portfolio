@@ -2,8 +2,32 @@ import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
 import uiux_preview from "../../assets/uiux.png";
 import Navbar from "../Navbar/Navbar";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 const Home = () => {
+  const container = useRef();
+  const work = useRef();
+
+  useGSAP(
+    () => {
+      let tl = gsap.timeline();
+      // gsap code here...
+      tl.from("li", { opacity: 0, stagger: 1.2 }); // <-- automatically reverted
+      tl.from(work.current!, {
+        duration: 2.5,
+        ease: "power3.out",
+        opacity: 0,
+        y: 200,
+        delay: 1,
+      });
+    },
+    { scope: container }
+  ); // <-- scope is for selector text (optional)
+
   return (
     <>
       <Navbar />
@@ -18,7 +42,10 @@ const Home = () => {
             <h1 className="text-6xl font-medium">Casey Koh</h1>
           </div>
           <div>
-            <ol className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm">
+            <ol
+              ref={container}
+              className="relative border-s border-gray-200 dark:border-gray-700 max-w-sm"
+            >
               <li className="mb-3 ms-4">
                 <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
@@ -50,7 +77,10 @@ const Home = () => {
           </div>
         </section>
         <div>
-          <section className="mt-64 mb-14 px-14 py-9 rounded-2xl bg-gray-950 top-56">
+          <section
+            ref={work}
+            className="mt-64 mb-14 px-14 py-9 rounded-2xl bg-gray-950 top-56"
+          >
             <div className="inline-block">
               <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
               <p className="inline-block align-top ms-1">&#40;2&#41;</p>

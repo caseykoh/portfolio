@@ -72,7 +72,7 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-32 text-gray-200 bg-gray-900 grid gap-5 grid-cols-[5fr_7fr]"
+        className="min-w-full font-inter container min-h-screen px-32 text-cyan-200 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-5 grid-cols-[5fr_7fr]"
       >
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">

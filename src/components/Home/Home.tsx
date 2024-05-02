@@ -14,6 +14,7 @@ const Home = () => {
   const timeline = useRef<HTMLDivElement>(null);
   const bodySection = useRef<HTMLDivElement>(null);
   const targetRef = useRef<HTMLDivElement>(null);
+  const aboutSection = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const updateMousePosition = (ev: MouseEvent) => {
@@ -60,14 +61,42 @@ const Home = () => {
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
             <h1 className="text-6xl font-semibold">Casey Koh</h1>
-            <h2 className="text-xl pt-4 ms-1">Frontend Developer</h2>
-            <p className="pt-6 ms-1 text-cyan-100/50">
+            <h2 className="text-xl pt-4">Frontend Developer</h2>
+            <p className="pt-6 text-cyan-100/50">
               I build enlightening, digital experiences.
             </p>
           </div>
+          <div>
+            <ul className="flex flex-col items-start gap-2">
+              <button
+                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                onClick={() => {
+                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                About
+              </button>
+              <button
+                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                onClick={() => {
+                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Experience
+              </button>
+              <button
+                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                onClick={() => {
+                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                Projects
+              </button>
+            </ul>
+          </div>
         </section>
-        <section ref={bodySection} className="my-20">
-          <div className="text-cyan-100/50 leading-relaxed">
+        <section ref={bodySection} className="py-20">
+          <div ref={aboutSection} className="text-cyan-100/50 leading-relaxed">
             <p className="mb-4">
               Fascinated by the weird and delightful corners of the Internet, I
               set out to recreate a favourite of mine: an animated visual sound

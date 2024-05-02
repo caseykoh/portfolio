@@ -13,8 +13,6 @@ const Home = () => {
   const container = useRef<HTMLOListElement>(null);
   const timeline = useRef<HTMLDivElement>(null);
   const work = useRef<HTMLDivElement>(null);
-  const contact = useRef<HTMLDivElement>(null);
-
   const targetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -42,27 +40,12 @@ const Home = () => {
       });
       tl.from(timeline.current!, { duration: 3.6, scaleY: 0 });
       tl.from("li", { opacity: 0, stagger: 1.2 }, "<"); // <-- automatically reverted
-      tl.from(work.current!, {
-        duration: 2.5,
+      gsap.from(work.current!, {
+        duration: 1.5,
         ease: "power3.out",
         opacity: 0,
         y: 200,
         delay: 0.5,
-      });
-      gsap.from(contact.current!, {
-        scrollTrigger: contact.current,
-        opacity: 0,
-        ease: "power3.out",
-        x: 200,
-        duration: 1.8,
-        delay: 0.5,
-      });
-      gsap.to([timeline.current!, container.current!], {
-        scrollTrigger: {
-          trigger: contact.current,
-          scrub: 2,
-        },
-        opacity: 0,
       });
     },
     { scope: container }
@@ -72,13 +55,18 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-32 text-cyan-200 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-5 grid-cols-[5fr_7fr]"
+        className="min-w-full font-inter container min-h-screen px-32 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-5 grid-cols-[5fr_7fr]"
       >
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
             <h1 className="text-6xl font-semibold">Casey Koh</h1>
             <h2 className="text-xl pt-4 ms-1">Frontend Developer</h2>
+            <p className="pt-6 ms-1 text-cyan-100/50">
+              I build enlightening, digital experiences.
+            </p>
           </div>
+        </section>
+        <section ref={work} className="my-20">
           <div className="ml-4 inline-flex">
             <div
               ref={timeline}
@@ -114,12 +102,7 @@ const Home = () => {
               </li>
             </ol>
           </div>
-        </section>
-        <div>
-          <section
-            ref={work}
-            className="mt-64 mb-14 px-14 py-9 rounded-2xl bg-gray-950 top-56"
-          >
+          <div className="rounded-2xl bg-gray-950 py-9 px-14">
             <div className="inline-block">
               <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
               <p className="inline-block align-top ms-1">&#40;2&#41;</p>
@@ -153,12 +136,8 @@ const Home = () => {
                 <p className="text-gray-500">Internship and portfolio work.</p>
               </div>
             </div>
-          </section>
-          <div ref={contact} className="mt-32 mb-12 text-right text-4xl">
-            <span>Contact @ </span>
-            <a className="underline cursor-pointer">s.casey.koh@gmail.com</a>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

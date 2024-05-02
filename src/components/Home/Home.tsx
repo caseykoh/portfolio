@@ -1,21 +1,34 @@
-import photocard from "../../assets/casey-koh-photocard.jpg";
 import proxii_world_preview from "../../assets/proxii_world.png";
 import uiux_preview from "../../assets/uiux.png";
-import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  const bio = useRef();
-  const container = useRef();
-  const timeline = useRef();
-  const work = useRef();
-  const contact = useRef();
+  const bio = useRef<HTMLDivElement>(null);
+  const container = useRef<HTMLOListElement>(null);
+  const timeline = useRef<HTMLDivElement>(null);
+  const work = useRef<HTMLDivElement>(null);
+  const contact = useRef<HTMLDivElement>(null);
+
+  const targetRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateMousePosition = (ev: MouseEvent) => {
+      if (!targetRef.current) return;
+      const { clientX, clientY } = ev;
+      targetRef.current.style.setProperty("--x", `${clientX}px`);
+      targetRef.current.style.setProperty("--y", `${clientY}px`);
+    };
+    window.addEventListener("mousemove", updateMousePosition);
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  });
 
   useGSAP(
     () => {
@@ -57,16 +70,14 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-      <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
-        <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-start flex-col sticky top-0">
+      <div
+        ref={targetRef}
+        className="min-w-full font-inter container min-h-screen px-32 text-gray-200 bg-gray-900 grid gap-5 grid-cols-[5fr_7fr]"
+      >
+        <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
-            <img
-              className="max-h-52 rounded-2xl mb-3"
-              src={photocard}
-              alt="Casey Koh Photo"
-            />
-            <h1 className="text-6xl font-medium">Casey Koh</h1>
+            <h1 className="text-6xl font-semibold">Casey Koh</h1>
+            <h2 className="text-xl pt-4 ms-1">Frontend Developer</h2>
           </div>
           <div className="ml-4 inline-flex">
             <div

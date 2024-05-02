@@ -12,7 +12,7 @@ const Home = () => {
   const bio = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLOListElement>(null);
   const timeline = useRef<HTMLDivElement>(null);
-  const work = useRef<HTMLDivElement>(null);
+  const bodySection = useRef<HTMLDivElement>(null);
   const targetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -32,20 +32,20 @@ const Home = () => {
     () => {
       let tl = gsap.timeline();
       tl.from(bio.current!, {
-        duration: 2,
+        duration: 1,
         ease: "power3.out",
         opacity: 0,
-        delay: 0.5,
-        y: -100,
+        delay: 0.2,
+        y: -80,
       });
       tl.from(timeline.current!, { duration: 3.6, scaleY: 0 });
       tl.from("li", { opacity: 0, stagger: 1.2 }, "<"); // <-- automatically reverted
-      gsap.from(work.current!, {
-        duration: 1.5,
+      gsap.from(bodySection.current!, {
+        duration: 1,
         ease: "power3.out",
         opacity: 0,
-        y: 200,
-        delay: 0.5,
+        y: 100,
+        delay: 0.2,
       });
     },
     { scope: container }
@@ -55,7 +55,7 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-32 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-5 grid-cols-[5fr_7fr]"
+        className="min-w-full font-inter container min-h-screen px-40 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[5fr_7fr]"
       >
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
@@ -66,11 +66,63 @@ const Home = () => {
             </p>
           </div>
         </section>
-        <section ref={work} className="my-20">
+        <section ref={bodySection} className="my-20">
+          <div className="text-cyan-100/50 leading-relaxed">
+            <p className="mb-4">
+              Fascinated by the weird and delightful corners of the Internet, I
+              set out to recreate a favourite of mine: an animated visual sound
+              experience called{" "}
+              <a
+                href="https://patatap.com/"
+                target="_blank"
+                className="underline"
+              >
+                patatap
+              </a>
+              . Seeing the endless possibilities of coding and web development,
+              I embarked on my journey as a developer in 2017. Since then, I've
+              had the privilege of working and training under mentors at{" "}
+              <a
+                href="https://www.stackadapt.com/"
+                target="_blank"
+                className="text-cyan-50"
+              >
+                StackAdapt
+              </a>
+              ,{" "}
+              <a
+                href="https://www.interaptix.com/"
+                target="_blank"
+                className="text-cyan-50"
+              >
+                Interaptix
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://arcticwolf.com/"
+                target="_blank"
+                className="text-cyan-50"
+              >
+                Arctic Wolf
+              </a>
+              .
+            </p>
+            <p className="mb-4">
+              In 2022, I was active as a tattoo artist in Toronto, honing my
+              composition and design skills. Working with multi-disciplinary
+              artists, I created digital solutions for their portfolio and
+              booking needs.
+            </p>
+            <p className="mb-4">
+              I live at the junction of design, art and technology - shining
+              when creating critical user experiences.
+            </p>
+          </div>
+
           <div className="ml-4 inline-flex">
             <div
               ref={timeline}
-              className="w-px h-full max-w-px bg-gray-700 origin-top"
+              className="w-px max-w-px bg-gray-700 origin-top"
             ></div>
             <ol ref={container} className="relative max-w-sm">
               <li className="mb-3 ms-4">

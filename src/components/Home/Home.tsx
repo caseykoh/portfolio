@@ -5,14 +5,17 @@ import Navbar from "../Navbar/Navbar";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
   const bio = useRef();
   const container = useRef();
   const timeline = useRef();
   const work = useRef();
+  const contact = useRef();
 
   useGSAP(
     () => {
@@ -33,6 +36,21 @@ const Home = () => {
         y: 200,
         delay: 0.5,
       });
+      gsap.from(contact.current!, {
+        scrollTrigger: contact.current,
+        opacity: 0,
+        ease: "power3.out",
+        x: 200,
+        duration: 1.8,
+        delay: 0.5,
+      });
+      gsap.to([timeline.current!, container.current!], {
+        scrollTrigger: {
+          trigger: contact.current,
+          scrub: 2,
+        },
+        opacity: 0,
+      });
     },
     { scope: container }
   ); // <-- scope is for selector text (optional)
@@ -42,7 +60,7 @@ const Home = () => {
       <Navbar />
       <div className="min-w-full font-inter container min-h-screen px-16 text-gray-50 bg-gradient-to-br from-gray-950 to-gray-800 grid gap-5 grid-cols-[5fr_7fr]">
         <section className="max-w-md min-h-screen max-h-screen py-11 flex justify-start flex-col sticky top-0">
-          <div ref={bio} className="mb-8">
+          <div ref={bio} className="mb-8 origin-top-left">
             <img
               className="max-h-52 rounded-2xl mb-3"
               src={photocard}
@@ -125,7 +143,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <div className="mt-32 mb-12 text-right text-4xl">
+          <div ref={contact} className="mt-32 mb-12 text-right text-4xl">
             <span>Contact @ </span>
             <a className="underline cursor-pointer">s.casey.koh@gmail.com</a>
           </div>

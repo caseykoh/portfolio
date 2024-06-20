@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
+// TODO: create experience and project sections and make references for them
+
 const Home = () => {
   const bio = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLOListElement>(null);
@@ -16,6 +18,7 @@ const Home = () => {
   const targetRef = useRef<HTMLDivElement>(null);
   const aboutSection = useRef<HTMLDivElement>(null);
 
+  //cursor gradient effect
   useEffect(() => {
     const updateMousePosition = (ev: MouseEvent) => {
       if (!targetRef.current) return;
@@ -29,6 +32,7 @@ const Home = () => {
     };
   });
 
+  //starting timeline
   useGSAP(
     () => {
       let tl = gsap.timeline();
@@ -67,7 +71,7 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <ul className="flex flex-col items-start gap-2">
+            <ul className="flex flex-col items-start gap-2s">
               <button
                 className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
                 onClick={() => {
@@ -189,7 +193,7 @@ const Home = () => {
               <p className="inline-block align-top ms-1">&#40;2&#41;</p>
             </div>
             <div className="mt-9 mb-12">
-              <a href="https://proxiiworld.netlify.app/">
+              <a href="https://proxiiworld.netlify.app/" target="_blank">
                 <img
                   className="rounded-3xl cursor-pointer"
                   src={proxii_world_preview}
@@ -205,7 +209,7 @@ const Home = () => {
               </div>
             </div>
             <div className="mt-9 mb-12">
-              <a href="https://caseykoh.webflow.io/">
+              <a href="https://caseykoh.webflow.io/" target="_blank">
                 <img
                   className="rounded-3xl cursor-pointer"
                   src={uiux_preview}

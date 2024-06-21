@@ -17,6 +17,8 @@ const Home = () => {
   const bodySection = useRef<HTMLDivElement>(null);
   const targetRef = useRef<HTMLDivElement>(null);
   const aboutSection = useRef<HTMLDivElement>(null);
+  const experienceSection = useRef<HTMLDivElement>(null);
+  const workSection = useRef<HTMLDivElement>(null);
 
   //cursor gradient effect
   useEffect(() => {
@@ -83,7 +85,9 @@ const Home = () => {
               <button
                 className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
                 onClick={() => {
-                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                  experienceSection.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
               >
                 Experience
@@ -91,7 +95,9 @@ const Home = () => {
               <button
                 className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
                 onClick={() => {
-                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                  workSection.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
                 }}
               >
                 Projects
@@ -152,7 +158,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="ml-4 inline-flex">
+          <div ref={experienceSection} className="ml-4 inline-flex">
             <div
               ref={timeline}
               className="w-px max-w-px bg-gray-700 origin-top"
@@ -187,7 +193,7 @@ const Home = () => {
               </li>
             </ol>
           </div>
-          <div className="rounded-2xl bg-gray-950 py-9 px-14">
+          <div ref={workSection} className="rounded-2xl bg-gray-950 py-9 px-14">
             <div className="inline-block">
               <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
               <p className="inline-block align-top ms-1">&#40;2&#41;</p>

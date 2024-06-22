@@ -14,9 +14,9 @@ const workExperience = [
     startDate: "2023",
     endDate: "Present",
     position: "Full Stack Developer",
-    company: "ProxiiWorld",
+    company: "Freelance",
     description:
-      "Custom designed and developed responsive booking website for Toronto-based tattoo artist, @proxii_dream.",
+      "Custom design and develop responsive web applications for multi-discliplinary artists.",
     link: "https://proxiiworld.netlify.app/",
     label: "Freelance Full Stack Developer",
   },
@@ -27,7 +27,7 @@ const workExperience = [
     position: "UX Design Co-op",
     company: "Arctic Wolf",
     description:
-      "Validated system migration on cybersecurity workflows and maintained design system patterns, promoting reusability and consistency throughout systems.",
+      "Validate system migration of cybersecurity workflows and maintain design system patterns, promoting reusability and consistency throughout systems.",
     link: "https://arcticwolf.com/",
     label: "UX Design Co-op at Arctic Wolf",
   },
@@ -38,7 +38,7 @@ const workExperience = [
     position: "Full Stack Engineer Co-op",
     company: "StackAdapt",
     description:
-      "Developed and launched a dedicated Connected TV advertising campaign creation flow, contributing to a 9x increase in active CTV campaigns. Frontend development with React, backend using Ruby, and Ruby on Rails.",
+      "Frontend development with React, backend using Ruby, and Ruby on Rails.",
     link: "https://www.stackadapt.com/",
     label: "Full Stack Engineer Co-op at StackAdapt",
   },
@@ -48,7 +48,7 @@ const workExperience = [
     endDate: "Aug 2018",
     position: "QA Developer Co-op",
     company: "QuickTapSurvey",
-    description: "Designed and developed web and mobile platform test scripts.",
+    description: "Design and develop web and mobile test scripts.",
     link: "https://quicktapsurvey.com/",
     label: "QA Developer Co-op at QuickTapSurvey",
   },
@@ -110,9 +110,9 @@ const Home = () => {
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
             <h1 className="text-6xl font-semibold">Casey Koh</h1>
-            <h2 className="text-xl pt-4">Frontend Developer</h2>
+            <h2 className="text-xl pt-4">Front-End Developer</h2>
             <p className="pt-6 text-cyan-100/50">
-              I build enlightening, digital experiences.
+              I craft dynamic and visually stunning digital experiences.
             </p>
           </div>
           <div>
@@ -151,23 +151,24 @@ const Home = () => {
         <section ref={bodySection} className="py-20">
           <div ref={aboutSection} className="text-cyan-100/50 leading-relaxed">
             <p className="mb-4">
-              Fascinated by the weird and delightful corners of the Internet, I
-              set out to recreate a favourite of mine: an animated visual sound
-              experience called{" "}
+              Originally fascinated by the weird and delightful corners of the
+              Internet, I set out to recreate a favourite of mine: a visual
+              sound kit called{" "}
               <a
                 href="https://patatap.com/"
                 target="_blank"
-                className="underline"
+                className="text-cyan-100/75 hover:text-cyan-400 focus-visible:text-cyan-400"
               >
                 patatap
               </a>
-              . Seeing the endless possibilities of coding and web development,
-              I embarked on my journey as a developer in 2017. Since then, I've
-              had the privilege of working and training under mentors at{" "}
+              . Realizing the awesome potential of digital experiences, I
+              embarked on my journey as a designer and developer in 2017. Since
+              then, I've had the privilege of working and training under mentors
+              at{" "}
               <a
                 href="https://www.stackadapt.com/"
                 target="_blank"
-                className="text-cyan-50"
+                className="text-cyan-50 hover:text-cyan-400 focus-visible:text-cyan-400"
               >
                 StackAdapt
               </a>
@@ -175,7 +176,7 @@ const Home = () => {
               <a
                 href="https://www.interaptix.com/"
                 target="_blank"
-                className="text-cyan-50"
+                className="text-cyan-50 hover:text-cyan-400 focus-visible:text-cyan-400"
               >
                 Interaptix
               </a>{" "}
@@ -183,21 +184,33 @@ const Home = () => {
               <a
                 href="https://arcticwolf.com/"
                 target="_blank"
-                className="text-cyan-50"
+                className="text-cyan-50 hover:text-cyan-400 focus-visible:text-cyan-400"
               >
                 Arctic Wolf
               </a>
               .
             </p>
             <p className="mb-4">
-              In 2022, I was active as a tattoo artist in Toronto, honing my
-              composition and design skills. Working with multi-disciplinary
-              artists, I created digital solutions for their portfolio and
-              booking needs.
+              From 2022 to 2024, I worked as a tattoo artist, co-founding a
+              Toronto-based tattoo collective called{" "}
+              <a
+                href="https://www.instagram.com/000000000000_studio/"
+                target="_blank"
+                className="text-cyan-50 hover:text-cyan-400 focus-visible:text-cyan-400"
+                aria-label="000000000000_studio"
+              >
+                @000000000000_Studio
+              </a>
+              . I gained invaluable design, digital marketing and
+              entrepreneurship skills while growing my global network of digital
+              creators.
             </p>
             <p className="mb-4">
-              I live at the junction of design, art and technology - shining
-              when creating critical user experiences.
+              Currently, I am working with multi-disciplinary artists, building
+              digital solutions for their e-commerce and booking needs. I
+              genuinely enjoy translating unique identities and stories into
+              user-friendly and captivating websites. But above all, my biggest
+              passion lies in connecting with creative and like-minded people ++
             </p>
           </div>
 

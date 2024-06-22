@@ -8,12 +8,55 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
-// TODO: create experience and project sections and make references for them
+const workExperience = [
+  {
+    id: 1,
+    startDate: "2023",
+    endDate: "Present",
+    position: "Full Stack Developer",
+    company: "ProxiiWorld",
+    description:
+      "Custom designed and developed responsive booking website for Toronto-based tattoo artist, @proxii_dream.",
+    link: "https://proxiiworld.netlify.app/",
+    label: "Freelance Full Stack Developer",
+  },
+  {
+    id: 2,
+    startDate: "Sept",
+    endDate: "Dec 2021",
+    position: "UX Design Co-op",
+    company: "Arctic Wolf",
+    description:
+      "Validated system migration on cybersecurity workflows and maintained design system patterns, promoting reusability and consistency throughout systems.",
+    link: "https://arcticwolf.com/",
+    label: "UX Design Co-op at Arctic Wolf",
+  },
+  {
+    id: 3,
+    startDate: "Sept",
+    endDate: "Dec 2019",
+    position: "Full Stack Engineer Co-op",
+    company: "StackAdapt",
+    description:
+      "Developed and launched a dedicated Connected TV advertising campaign creation flow, contributing to a 9x increase in active CTV campaigns. Frontend development with React, backend using Ruby, and Ruby on Rails.",
+    link: "https://www.stackadapt.com/",
+    label: "Full Stack Engineer Co-op at StackAdapt",
+  },
+  {
+    id: 4,
+    startDate: "May",
+    endDate: "Aug 2018",
+    position: "QA Developer Co-op",
+    company: "QuickTapSurvey",
+    description: "Designed and developed web and mobile platform test scripts.",
+    link: "https://quicktapsurvey.com/",
+    label: "QA Developer Co-op at QuickTapSurvey",
+  },
+];
 
 const Home = () => {
   const bio = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLOListElement>(null);
-  const timeline = useRef<HTMLDivElement>(null);
   const bodySection = useRef<HTMLDivElement>(null);
   const targetRef = useRef<HTMLDivElement>(null);
   const aboutSection = useRef<HTMLDivElement>(null);
@@ -34,35 +77,35 @@ const Home = () => {
     };
   });
 
-  //starting timeline
-  useGSAP(
-    () => {
-      let tl = gsap.timeline();
-      tl.from(bio.current!, {
-        duration: 1,
-        ease: "power3.out",
-        opacity: 0,
-        delay: 0.2,
-        y: -80,
-      });
-      tl.from(timeline.current!, { duration: 3.6, scaleY: 0 });
-      tl.from("li", { opacity: 0, stagger: 1.2 }, "<"); // <-- automatically reverted
-      gsap.from(bodySection.current!, {
-        duration: 1,
-        ease: "power3.out",
-        opacity: 0,
-        y: 100,
-        delay: 0.2,
-      });
-    },
-    { scope: container }
-  ); // <-- scope is for selector text (optional)
+  //timeline animation
+  // useGSAP(
+  //   () => {
+  //     let tl = gsap.timeline();
+  //     tl.from(bio.current!, {
+  //       duration: 1,
+  //       ease: "power3.out",
+  //       opacity: 0,
+  //       delay: 0.2,
+  //       y: -80,
+  //     });
+  //     tl.from(timeline.current!, { duration: 3.6, scaleY: 0 });
+  //     tl.from("li", { opacity: 0, stagger: 1.2 }, "<"); // <-- automatically reverted
+  //     gsap.from(bodySection.current!, {
+  //       duration: 1,
+  //       ease: "power3.out",
+  //       opacity: 0,
+  //       y: 100,
+  //       delay: 0.2,
+  //     });
+  //   },
+  //   { scope: container }
+  // ); // <-- scope is for selector text (optional)
 
   return (
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-40 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[5fr_7fr]"
+        className="min-w-full font-inter container min-h-screen px-40 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[4fr_8fr]"
       >
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
@@ -158,42 +201,44 @@ const Home = () => {
             </p>
           </div>
 
-          <div ref={experienceSection} className="ml-4 inline-flex">
-            <div
-              ref={timeline}
-              className="w-px max-w-px bg-gray-700 origin-top"
-            ></div>
-            <ol ref={container} className="relative max-w-sm">
-              <li className="mb-3 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  April 2022
-                </time>
-                <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-                  Graduated Computer Science Co-op at University of Waterloo
-                </p>
-              </li>
-              <li className="mb-3 ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  Feb 2023
-                </time>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Tattoo Artist at Zero Studio
-                </p>
-              </li>
-              <li className="ms-4">
-                <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-                <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
-                  Sept 2023
-                </time>
-                <p className="text-base font-normal text-gray-500 dark:text-gray-400">
-                  Freelance Developer/Designer
-                </p>
-              </li>
+          <div ref={experienceSection} className="mt-20 max-w-xl">
+            <ol ref={container} className="">
+              {workExperience.map((experience) => (
+                <li className="mb-10" key={experience.id}>
+                  <div className="grid grid-cols-4 gap-4 relative py-2">
+                    <span className="block z-0 absolute -inset-y-3 -inset-x-4"></span>
+                    <time className="text-sm relative z-10 col-span-1 font-normal text-gray-400 dark:text-gray-500">
+                      {experience.startDate} — {experience.endDate}
+                    </time>
+                    <div className="col-start-2 col-end-5 z-10">
+                      <h3 className="mb-2 text-base text-gray-100 font-semibold dark:text-gray-400">
+                        <a
+                          className="hover:text-cyan-400 focus-visible:text-cyan-400"
+                          href={experience.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={experience.label}
+                        >
+                          <span className="duration-100 hover:bg-slate-950 hover:drop-shadow-xl rounded-md opacity-30 absolute block -inset-y-3 -inset-x-4"></span>
+                          <span className="z-10 relative pointer-events-none">
+                            {experience.position} | {experience.company}
+                          </span>
+                        </a>
+                      </h3>
+                      <p className="z-10 relative pointer-events-none text-sm font-normal text-gray-500 dark:text-gray-400">
+                        {experience.description}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
             </ol>
           </div>
-          <div ref={workSection} className="rounded-2xl bg-gray-950 py-9 px-14">
+          <div
+            ref={workSection}
+            id="workSection"
+            className="rounded-2xl bg-gray-950 py-9 px-14"
+          >
             <div className="inline-block">
               <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
               <p className="inline-block align-top ms-1">&#40;2&#41;</p>

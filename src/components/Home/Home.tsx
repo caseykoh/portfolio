@@ -201,7 +201,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div ref={experienceSection} className="mt-20 max-w-xl">
+          <div ref={experienceSection} className="pt-20 max-w-xl">
             <ol ref={container} className="">
               {workExperience.map((experience) => (
                 <li className="mb-10" key={experience.id}>

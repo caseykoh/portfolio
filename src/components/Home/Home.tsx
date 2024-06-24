@@ -1,5 +1,5 @@
-import proxii_world_preview from "../../assets/proxii_world.png";
-import uiux_preview from "../../assets/uiux.png";
+import proxii_world_mockup from "../../assets/proxiiworld_mockup.png";
+import arctic_wolf_case from "../../assets/arctic_wolf_case.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
@@ -105,7 +105,7 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-40 text-cyan-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[4fr_8fr]"
+        className="min-w-full font-inter container min-h-screen px-40 text-slate-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[4fr_8fr]"
       >
         <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
@@ -250,41 +250,47 @@ const Home = () => {
           <div
             ref={workSection}
             id="workSection"
-            className="rounded-2xl bg-gray-950 py-9 px-14"
+            className="py-9 grid grid-cols-2 gap-x-6 gap-y-10"
           >
-            <div className="inline-block">
-              <h2 className="text-4xl font-bold inline-block">Selected Work</h2>
-              <p className="inline-block align-top ms-1">&#40;2&#41;</p>
-            </div>
-            <div className="mt-9 mb-12">
-              <a href="https://proxiiworld.netlify.app/" target="_blank">
-                <img
-                  className="rounded-3xl cursor-pointer"
-                  src={proxii_world_preview}
-                  alt="proxii_world"
-                />
-              </a>
-              <div className="my-8">
-                <h3 className="font-bold text-lg">proxii_world</h3>
-                <p className="text-gray-500">
-                  Showcasing a unique artist's voice through brutalist style
-                  booking site.
-                </p>
+            <a
+              href="https://proxiiworld.netlify.app/"
+              className=""
+              target="_blank"
+            >
+              <div className="aspect-[1/1] rounded relative bg-slate-800 max-w-lg duration-100 hover:bg-slate-700">
+                <div className="absolute left-2/4 aspect-[8/9] bottom-0 w-10/12 -translate-x-2/4 overflow-hidden ">
+                  <img
+                    className="object-cover object-top w-full h-full max-h-96 cursor-pointer"
+                    src={proxii_world_mockup}
+                    alt="proxii_world"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="mt-9 mb-12">
-              <a href="https://caseykoh.webflow.io/" target="_blank">
-                <img
-                  className="rounded-3xl cursor-pointer"
-                  src={uiux_preview}
-                  alt="UI/UX Work"
-                />
-              </a>
-              <div className="my-8">
-                <h3 className="font-bold text-lg">UI/UX Work</h3>
-                <p className="text-gray-500">Internship and portfolio work.</p>
+              <div className="pt-6 pb-2">
+                <h3 className="text-slate-100 text-lg">proxii_world</h3>
+                <h4 className="text-slate-400">
+                  Front-End / Back-End Development
+                </h4>
               </div>
-            </div>
+            </a>
+            <a
+              href="https://caseykoh.webflow.io/projects/arctic-wolf"
+              target="_blank"
+            >
+              <div className="aspect-[1/1] rounded relative bg-slate-800 max-w-lg duration-100 hover:bg-slate-700">
+                <div className="absolute left-2/4 aspect-[8/9] bottom-0 w-10/12 -translate-x-2/4 overflow-hidden ">
+                  <img
+                    className="object-cover object-top w-full h-full max-h-96 cursor-pointer"
+                    src={arctic_wolf_case}
+                    alt="proxii_world"
+                  />
+                </div>
+              </div>
+              <div className="pt-6 pb-2">
+                <h3 className="text-slate-100 text-lg">Arctic Wolf </h3>
+                <h4 className="text-slate-400">UX Research Case Study</h4>
+              </div>
+            </a>
           </div>
         </section>
       </div>

@@ -117,22 +117,22 @@ const Home = () => {
               <button
                 className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
                 onClick={() => {
-                  experienceSection.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                Experience
-              </button>
-              <button
-                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
-                onClick={() => {
                   workSection.current?.scrollIntoView({
                     behavior: "smooth",
                   });
                 }}
               >
                 Projects
+              </button>
+              <button
+                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                onClick={() => {
+                  experienceSection.current?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                Experience
               </button>
             </ul>
           </div>

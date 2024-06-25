@@ -11,14 +11,14 @@ gsap.registerPlugin(ScrollTrigger);
 const workExperience = [
   {
     id: 1,
-    startDate: "2023",
-    endDate: "Present",
-    position: "Full Stack Developer",
-    company: "Freelance",
+    startDate: "Sept",
+    endDate: "Dec 2019",
+    position: "Full Stack Engineer Co-op",
+    company: "StackAdapt",
     description:
-      "Custom design and develop responsive web applications for multi-discliplinary artists.",
-    link: "https://proxiiworld.netlify.app/",
-    label: "Freelance Full Stack Developer",
+      "Frontend development with React, backend using Ruby, and Ruby on Rails.",
+    link: "https://www.stackadapt.com/",
+    label: "Full Stack Engineer Co-op at StackAdapt",
   },
   {
     id: 2,
@@ -33,17 +33,6 @@ const workExperience = [
   },
   {
     id: 3,
-    startDate: "Sept",
-    endDate: "Dec 2019",
-    position: "Full Stack Engineer Co-op",
-    company: "StackAdapt",
-    description:
-      "Frontend development with React, backend using Ruby, and Ruby on Rails.",
-    link: "https://www.stackadapt.com/",
-    label: "Full Stack Engineer Co-op at StackAdapt",
-  },
-  {
-    id: 4,
     startDate: "May",
     endDate: "Aug 2018",
     position: "QA Developer Co-op",
@@ -213,40 +202,6 @@ const Home = () => {
               passion lies in connecting with creative and like-minded people ++
             </p>
           </div>
-
-          <div ref={experienceSection} className="pt-20 max-w-xl">
-            <ol ref={container} className="">
-              {workExperience.map((experience) => (
-                <li className="mb-10" key={experience.id}>
-                  <div className="grid grid-cols-4 gap-4 relative py-2">
-                    <span className="block z-0 absolute -inset-y-3 -inset-x-4"></span>
-                    <time className="text-sm relative z-10 col-span-1 font-normal text-gray-400 dark:text-gray-500">
-                      {experience.startDate} — {experience.endDate}
-                    </time>
-                    <div className="col-start-2 col-end-5 z-10">
-                      <h3 className="mb-2 text-base text-gray-100 font-semibold dark:text-gray-400">
-                        <a
-                          className="hover:text-cyan-400 focus-visible:text-cyan-400"
-                          href={experience.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={experience.label}
-                        >
-                          <span className="duration-100 hover:bg-slate-950 hover:drop-shadow-xl rounded-md opacity-30 absolute block -inset-y-3 -inset-x-4"></span>
-                          <span className="z-10 relative pointer-events-none">
-                            {experience.position} | {experience.company}
-                          </span>
-                        </a>
-                      </h3>
-                      <p className="z-10 relative pointer-events-none text-sm font-normal text-gray-500 dark:text-gray-400">
-                        {experience.description}
-                      </p>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
           <div
             ref={workSection}
             id="workSection"
@@ -291,6 +246,39 @@ const Home = () => {
                 <h4 className="text-slate-400">UX Research Case Study</h4>
               </div>
             </a>
+          </div>
+          <div ref={experienceSection} className="pt-20 max-w-xl">
+            <ol ref={container} className="">
+              {workExperience.map((experience) => (
+                <li className="mb-10" key={experience.id}>
+                  <div className="grid grid-cols-4 gap-4 relative py-2">
+                    <span className="block z-0 absolute -inset-y-3 -inset-x-4"></span>
+                    <time className="text-sm relative z-10 col-span-1 font-normal text-gray-400 dark:text-gray-500">
+                      {experience.startDate} — {experience.endDate}
+                    </time>
+                    <div className="col-start-2 col-end-5 z-10">
+                      <h3 className="mb-2 text-base text-gray-100 font-semibold dark:text-gray-400">
+                        <a
+                          className="hover:text-cyan-400 focus-visible:text-cyan-400"
+                          href={experience.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={experience.label}
+                        >
+                          <span className="duration-100 hover:bg-slate-950 hover:drop-shadow-xl rounded-md opacity-30 absolute block -inset-y-3 -inset-x-4"></span>
+                          <span className="z-10 relative pointer-events-none">
+                            {experience.position} | {experience.company}
+                          </span>
+                        </a>
+                      </h3>
+                      <p className="z-10 relative pointer-events-none text-sm font-normal text-gray-500 dark:text-gray-400">
+                        {experience.description}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ol>
           </div>
         </section>
       </div>

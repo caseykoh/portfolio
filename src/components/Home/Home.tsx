@@ -105,9 +105,9 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full font-inter container min-h-screen px-40 text-slate-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid gap-24 grid-cols-[4fr_8fr]"
+        className="min-w-full font-inter container min-h-screen px-10 lg:px-40 text-slate-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid lg:gap-24 grid-cols-1 lg:grid-cols-[4fr_8fr]"
       >
-        <section className="max-w-md min-h-screen max-h-screen py-20 flex justify-start flex-col sticky top-0">
+        <section className="max-w-md lg:min-h-screen max-h-screen py-20 flex justify-start flex-col lg:sticky top-0">
           <div ref={bio} className="mb-8 origin-top-left">
             <h1 className="text-6xl font-semibold">Casey Koh</h1>
             <h2 className="text-xl pt-4">Front-End Developer</h2>

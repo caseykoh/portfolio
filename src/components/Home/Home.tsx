@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FiArrowUpRight } from "react-icons/fi";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -301,6 +302,16 @@ const Home = () => {
                 </li>
               ))}
             </ol>
+            <div className="inline-block">
+              <a
+                href="src/assets/caseykohresume.pdf"
+                target="_blank"
+                className="flex items-center font-semibold gap-1 hover:text-cyan-400 focus-visible:text-cyan-400"
+              >
+                <span>See resume</span>
+                <FiArrowUpRight />
+              </a>
+            </div>
           </div>
         </section>
       </div>

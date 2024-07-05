@@ -33,6 +33,28 @@ const workExperience = [
   },
   {
     id: 3,
+    startDate: "Jan",
+    endDate: "Apr 2021",
+    position: "UI/UX Design Co-op",
+    company: "Interaptix",
+    description:
+      "Design asset management UI and craft responsive mobile AR experience with cross-platform communication.",
+    link: "https://www.interaptix.com/",
+    label: "UI/UX Design Co-op at Interaptix",
+  },
+  {
+    id: 4,
+    startDate: "Jan",
+    endDate: "Apr 2019",
+    position: "Full Stack Developer Co-op",
+    company: "Imagine Communications",
+    description:
+      "Optimize database architecture, and implement data source providers. Microsoft .NET and C#.",
+    link: "https://imaginecommunications.com/",
+    label: "Full Stack Developer Co-op at Imagine Communications",
+  },
+  {
+    id: 5,
     startDate: "May",
     endDate: "Aug 2018",
     position: "QA Developer Co-op",

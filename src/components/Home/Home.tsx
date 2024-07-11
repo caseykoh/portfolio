@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -119,45 +120,56 @@ const Home = () => {
         ref={targetRef}
         className="min-w-full font-inter container min-h-screen px-10 lg:px-40 text-slate-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid lg:gap-24 grid-cols-1 lg:grid-cols-[4fr_8fr]"
       >
-        <section className="max-w-md lg:min-h-screen max-h-screen py-20 flex justify-start flex-col lg:sticky top-0">
-          <div ref={bio} className="mb-8 origin-top-left">
-            <h1 className="text-6xl font-semibold">Casey Koh</h1>
-            <h2 className="text-xl pt-4">Front-End Developer</h2>
-            <p className="pt-6 text-cyan-100/50">
-              I craft dynamic and visually stunning digital experiences.
-            </p>
+        <section className="max-w-md lg:min-h-screen max-h-screen py-20 flex justify-between flex-col lg:sticky top-0">
+          <div>
+            <div ref={bio} className="mb-8 origin-top-left">
+              <h1 className="text-6xl font-semibold">Casey Koh</h1>
+              <h2 className="text-xl pt-4">Front-End Developer</h2>
+              <p className="pt-6 text-cyan-100/50">
+                I craft dynamic and visually stunning digital experiences.
+              </p>
+            </div>
+            <div>
+              <ul className="flex flex-col items-start gap-2s">
+                <button
+                  className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                  onClick={() => {
+                    bodySection.current?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  About
+                </button>
+                <button
+                  className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                  onClick={() => {
+                    workSection.current?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Projects
+                </button>
+                <button
+                  className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
+                  onClick={() => {
+                    experienceSection.current?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Experience
+                </button>
+              </ul>
+            </div>
           </div>
           <div>
-            <ul className="flex flex-col items-start gap-2s">
-              <button
-                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
-                onClick={() => {
-                  bodySection.current?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                About
-              </button>
-              <button
-                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
-                onClick={() => {
-                  workSection.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                Projects
-              </button>
-              <button
-                className="text-xl font-medium opacity-75 hover:opacity-100 duration-200"
-                onClick={() => {
-                  experienceSection.current?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                Experience
-              </button>
-            </ul>
+            <a
+              href="https://github.com/caseykoh"
+              target="_blank"
+              className="inline-block opacity-75 hover:opacity-100 hover:text-cyan-200 focus-visible:text-cyan-200"
+            >
+              <AiFillGithub size={40} />
+            </a>
           </div>
         </section>
         <section ref={bodySection} className="py-20">

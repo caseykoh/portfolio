@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -120,7 +120,7 @@ const Home = () => {
         ref={targetRef}
         className="min-w-full font-inter container min-h-screen px-10 lg:px-40 text-slate-100 bg-slate-900 bg-[radial-gradient(circle_600px_at_var(--x,100px)_var(--y,100px),#172c3d_0%,transparent_100%)] grid lg:gap-24 grid-cols-1 lg:grid-cols-[4fr_8fr]"
       >
-        <section className="max-w-md max-h-[60vh] py-20 flex justify-between flex-col lg:sticky top-0">
+        <section className="max-w-md max-h-[65vh] py-20 flex justify-between flex-col lg:sticky top-0">
           <div>
             <div ref={bio} className="mb-8 origin-top-left">
               <h1 className="text-6xl font-semibold">Casey Koh</h1>
@@ -162,13 +162,20 @@ const Home = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="flex gap-2">
             <a
               href="https://github.com/caseykoh"
               target="_blank"
-              className="mt-8 inline-block opacity-75 hover:opacity-100 hover:text-cyan-200 focus-visible:text-cyan-200"
+              className="mt-8 inline-block opacity-75 hover:opacity-100 duration-200"
             >
               <AiFillGithub size={40} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/caseykoh/"
+              target="_blank"
+              className="mt-8 inline-block opacity-75 hover:opacity-100 duration-200"
+            >
+              <AiFillLinkedin size={40} />
             </a>
           </div>
         </section>

@@ -126,7 +126,7 @@ const Home = () => {
               <h1 className="text-6xl font-semibold">Casey Koh</h1>
               <h2 className="text-xl pt-4">Front-End Developer</h2>
               <p className="pt-6 text-cyan-100/50">
-                I craft dynamic and visually stunning digital experiences.
+                I excel at solving problems and creating innovative solutions.
               </p>
             </div>
             <div>

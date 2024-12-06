@@ -124,9 +124,7 @@ const Home = () => {
           <div>
             <div ref={bio} className="mb-8 origin-top-left">
               <h1 className="text-6xl font-semibold">Casey Koh</h1>
-              <h2 className="text-l pt-4 opacity-75">
-                Full-Stack Development/UX Design
-              </h2>
+              <h2 className="text-l pt-4 opacity-75">Full-Stack Developer</h2>
               <p className="pt-6 text-sm text-cyan-100/50">
                 I excel at solving problems and creating innovative solutions.
               </p>

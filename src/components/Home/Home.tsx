@@ -1,5 +1,10 @@
 import proxii_world_mockup from "../../assets/proxiiworld_mockup.png";
 import arctic_wolf_case from "../../assets/arctic_wolf_case.png";
+import sturesident_case from "../../assets/sturesident.png";
+import flash_case from "../../assets/flash.png";
+import mpod_case from "../../assets/mpod.jpeg";
+import seashell from "../../assets/seashell.png";
+
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
@@ -67,6 +72,41 @@ const workExperience = [
   },
 ];
 
+const caseStudies = [
+  {
+    id: 1,
+    title: "Tattoo Booking Platform",
+    category: "Web Development, UI/UX",
+    image: proxii_world_mockup,
+    link: "https://proxiiworld.netlify.app/",
+  },
+  {
+    id: 2,
+    title: "Dashboard UX and Research",
+    category: "UI/UX",
+    image: arctic_wolf_case,
+    link: "https://caseykoh.webflow.io/projects/arctic-wolf",
+  },
+  {
+    id: 3,
+    title: "Studio Promotional Materials",
+    category: "Branding",
+    image: sturesident_case,
+  },
+  {
+    id: 4,
+    title: "Clothing Graphic Design",
+    category: "Graphic Design",
+    image: mpod_case,
+  },
+  {
+    id: 5,
+    title: "Digital Art Collection",
+    category: "Mobile Design",
+    image: flash_case,
+  },
+];
+
 const Home = () => {
   const bio = useRef<HTMLDivElement>(null);
   const container = useRef<HTMLOListElement>(null);
@@ -118,71 +158,58 @@ const Home = () => {
     <>
       <div
         ref={targetRef}
-        className="min-w-full flex justify-center font-inter container min-h-screen px-10 text-slate-800"
+        className="min-w-full flex justify-center font-inter container min-h-screen px-10 text-slate-100"
       >
+        <div className="absolute w-28 top-36 left-40">
+          <img src={seashell} alt="Casey Koh" className="mix-blend-screen" />
+        </div>
         <div className="max-w-4xl">
-          <section className="max-w-md max-h-[65vh] py-20 flex justify-between flex-col">
+          <section className="max-w-md max-h-[65vh] pt-[12rem] pb-2 flex justify-between flex-col">
             <div>
               <div ref={bio} className="origin-top-left">
-                <h1 className="text-6xl font-semibold">Casey Koh</h1>
+                <h1 className="text-xl text-blue-400 mix-blend-screen">
+                  Casey Koh
+                </h1>
               </div>
             </div>
-            <div className="flex gap-2">
+            {/* <div className="flex gap-2 mt-2">
               <a
                 href="https://github.com/caseykoh"
                 target="_blank"
-                className="mt-8 inline-block opacity-75 hover:opacity-100 duration-200"
+                className="inline-block opacity-75 hover:opacity-100 duration-200"
               >
                 [Github]
               </a>
               <a
                 href="https://www.linkedin.com/in/caseykoh/"
                 target="_blank"
-                className="mt-8 inline-block opacity-75 hover:opacity-100 duration-200"
+                className="inline-block opacity-75 hover:opacity-100 duration-200"
               >
                 [LinkedIn]
               </a>
-            </div>
+            </div> */}
           </section>
-          <section ref={bodySection} className="py-20">
+          <section ref={bodySection} className="py-8">
             <div
-              ref={workSection}
               id="workSection"
-              className="py-9 grid grid-cols-2 gap-x-6 gap-y-10"
+              className="py-4 grid grid-cols-2 gap-x-6 gap-y-10"
             >
-              <a
-                href="https://proxiiworld.netlify.app/"
-                className=""
-                target="_blank"
-              >
-                <div className="max-w-lg duration-100 rounded">
-                  <img
-                    className="rounded object-cover object-top w-full h-full max-h-96 cursor-pointer"
-                    src={proxii_world_mockup}
-                    alt="proxii_world"
-                  />
+              {caseStudies.map((study, index) => (
+                <div key={study.id}>
+                  <a href={study.link} className="" target="_blank">
+                    <div className="max-w-lg duration-100 rounded">
+                      <img
+                        className="rounded object-cover object-top w-full h-full max-h-96 cursor-pointer"
+                        src={study.image}
+                      />
+                    </div>
+                    {/* <div className="pt-6 pb-2">
+                      <h3 className="text-lg">{study.title}</h3>
+                      <h4 className="">{study.category}</h4>
+                    </div> */}
+                  </a>
                 </div>
-                <div className="pt-6 pb-2">
-                  <h3 className="text-lg">proxii_world</h3>
-                  <h4 className="">Front-End / Back-End Development</h4>
-                </div>
-              </a>
-              <a
-                href="https://caseykoh.webflow.io/projects/arctic-wolf"
-                target="_blank"
-              >
-                <div className="max-w-lg duration-100 rounded">
-                  <img
-                    className="rounded object-cover object-top w-full h-full max-h-96 cursor-pointer"
-                    src={arctic_wolf_case}
-                    alt="proxii_world"
-                  />
-                </div>
-                <div className="pt-6 pb-2">
-                  <h3 className="text-lg">Arctic Wolf </h3>
-                  <h4 className="">UX Research Case Study</h4>
-                </div>
-              </a>
+              ))}
             </div>
             <div ref={experienceSection} className="pt-20 max-w-xl">
               <ol ref={container} className="">

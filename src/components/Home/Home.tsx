@@ -78,6 +78,7 @@ const caseStudies = [
     category: "Web Development, UI/UX",
     image: proxii_world_mockup,
     link: "https://proxiiworld.netlify.app/",
+    client: "proxii_dream",
   },
   {
     id: 2,
@@ -85,24 +86,28 @@ const caseStudies = [
     category: "UI/UX",
     image: arctic_wolf_case,
     link: "https://caseykoh.webflow.io/projects/arctic-wolf",
+    client: "Arctic Wolf",
   },
   {
     id: 3,
     title: "Studio Promotional Materials",
-    category: "Branding",
+    category: "Social Media, Branding",
     image: sturesident_case,
+    client: "Zero Studio",
   },
   {
     id: 4,
     title: "Clothing Graphic Design",
     category: "Graphic Design",
     image: mpod_case,
+    client: "MaybePerhapsOneDay",
   },
   {
     id: 5,
     title: "Digital Art Collection",
-    category: "Mobile Design",
+    category: "Illustration, Creative Direction",
     image: flash_case,
+    client: "Personal",
   },
 ];
 
@@ -179,7 +184,7 @@ const Home = () => {
               {caseStudies.map((study, index) => (
                 <div
                   key={study.id}
-                  className="group overflow-hidden rounded-lg shadow-lg transform transition-all opacity-0 duration-500 animate-slideFadeIn"
+                  className="group overflow-hidden rounded-lg shadow-lg  transform transition-all opacity-0 duration-500 animate-slideFadeIn"
                   style={{
                     animationDelay: `${index * 300}ms`,
                   }}
@@ -190,11 +195,19 @@ const Home = () => {
                         className="rounded object-cover object-top w-full h-full max-h-96 cursor-pointer"
                         src={study.image}
                       />
+                      <div className="absolute inset-0 bg-slate-800/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="flex w-full h-full justify-center items-center bottom-0 left-0 right-0 p-4 group-hover:opacity-100 duration-300">
+                          <div className="flex flex-col items-center">
+                            <h3 className="text-white font-bold text-2xl mb-1">
+                              {study.title}
+                            </h3>
+                            <p className="text-white/80 text-sm">
+                              {study.category}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    {/* <div className="pt-6 pb-2">
-                      <h3 className="text-lg">{study.title}</h3>
-                      <h4 className="">{study.category}</h4>
-                    </div> */}
                   </a>
                 </div>
               ))}

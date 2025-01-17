@@ -176,8 +176,14 @@ const Home = () => {
               id="workSection"
               className="py-4 grid grid-cols-2 gap-x-6 gap-y-10"
             >
-              {caseStudies.map((study) => (
-                <div key={study.id}>
+              {caseStudies.map((study, index) => (
+                <div
+                  key={study.id}
+                  className="group overflow-hidden rounded-lg shadow-lg transform transition-all opacity-0 duration-500 animate-slideFadeIn"
+                  style={{
+                    animationDelay: `${index * 300}ms`,
+                  }}
+                >
                   <a href={study.link} className="" target="_blank">
                     <div className="max-w-lg duration-100 rounded">
                       <img

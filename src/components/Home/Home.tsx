@@ -10,7 +10,6 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -114,7 +113,6 @@ const Home = () => {
   const targetRef = useRef<HTMLDivElement>(null);
   const aboutSection = useRef<HTMLDivElement>(null);
   const experienceSection = useRef<HTMLDivElement>(null);
-  const workSection = useRef<HTMLDivElement>(null);
 
   //cursor gradient effect
   useEffect(() => {
@@ -172,29 +170,13 @@ const Home = () => {
                 </h1>
               </div>
             </div>
-            {/* <div className="flex gap-2 mt-2">
-              <a
-                href="https://github.com/caseykoh"
-                target="_blank"
-                className="inline-block opacity-75 hover:opacity-100 duration-200"
-              >
-                [Github]
-              </a>
-              <a
-                href="https://www.linkedin.com/in/caseykoh/"
-                target="_blank"
-                className="inline-block opacity-75 hover:opacity-100 duration-200"
-              >
-                [LinkedIn]
-              </a>
-            </div> */}
           </section>
           <section ref={bodySection} className="py-8">
             <div
               id="workSection"
               className="py-4 grid grid-cols-2 gap-x-6 gap-y-10"
             >
-              {caseStudies.map((study, index) => (
+              {caseStudies.map((study) => (
                 <div key={study.id}>
                   <a href={study.link} className="" target="_blank">
                     <div className="max-w-lg duration-100 rounded">
@@ -321,6 +303,22 @@ const Home = () => {
                 all, my biggest passion lies in connecting with creative and
                 like-minded people ++
               </p>
+            </div>
+            <div className="flex gap-2 mt-2">
+              <a
+                href="https://github.com/caseykoh"
+                target="_blank"
+                className="inline-block opacity-75 hover:opacity-100 duration-200"
+              >
+                [Github]
+              </a>
+              <a
+                href="https://www.linkedin.com/in/caseykoh/"
+                target="_blank"
+                className="inline-block opacity-75 hover:opacity-100 duration-200"
+              >
+                [LinkedIn]
+              </a>
             </div>
           </section>
         </div>

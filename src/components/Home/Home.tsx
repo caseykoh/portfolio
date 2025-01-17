@@ -90,7 +90,7 @@ const caseStudies = [
   },
   {
     id: 3,
-    title: "Studio Promotional Materials",
+    title: "Studio Digital Content",
     category: "Social Media, Branding",
     image: sturesident_case,
     client: "Zero Studio",
@@ -179,32 +179,34 @@ const Home = () => {
           <section ref={bodySection} className="py-8">
             <div
               id="workSection"
-              className="py-4 grid grid-cols-2 gap-x-6 gap-y-10"
+              className="py-4 grid md:grid-cols-2 gap-x-6 gap-y-10 grid-cols-1"
             >
               {caseStudies.map((study, index) => (
                 <div
                   key={study.id}
-                  className="group overflow-hidden rounded-lg shadow-lg  transform transition-all opacity-0 duration-500 animate-slideFadeIn"
+                  className="aspect-[1/1] cursor-pointer group bg-blue-400 overflow-hidden rounded-lg shadow-lg  transform transition-all opacity-0 duration-500 animate-slideFadeIn"
                   style={{
                     animationDelay: `${index * 300}ms`,
                   }}
                 >
-                  <a href={study.link} className="" target="_blank">
-                    <div className="max-w-lg duration-100 rounded">
-                      <img
-                        className="rounded object-cover object-top w-full h-full max-h-96 cursor-pointer"
-                        src={study.image}
-                      />
-                      <div className="absolute inset-0 bg-slate-800/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="flex w-full h-full justify-center items-center bottom-0 left-0 right-0 p-4 group-hover:opacity-100 duration-300">
-                          <div className="flex flex-col items-center">
-                            <h3 className="text-white font-bold text-2xl mb-1">
-                              {study.title}
-                            </h3>
-                            <p className="text-white/80 text-sm">
-                              {study.category}
-                            </p>
-                          </div>
+                  <a
+                    href={study.link}
+                    className="block w-full h-full"
+                    target="_blank"
+                  >
+                    <img
+                      className="rounded object-cover w-full"
+                      src={study.image}
+                    />
+                    <div className="absolute inset-0 bg-slate-800/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex w-full h-full justify-center items-center bottom-0 left-0 right-0 p-4 group-hover:opacity-100 duration-300">
+                        <div className="flex flex-col items-center">
+                          <h3 className="text-white font-bold text-2xl mb-1">
+                            {study.title}
+                          </h3>
+                          <p className="text-white/80 text-sm">
+                            {study.category}
+                          </p>
                         </div>
                       </div>
                     </div>

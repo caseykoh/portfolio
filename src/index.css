@@ -23,6 +23,15 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: #c3ccdb; /* bg-slate-900 */
+  background-image: radial-gradient(
+    circle 600px at var(--x, 100px) var(--y, 100px),
+    #4e8dc0 0%,
+    transparent 100%
+  );
+}
+
 /* Preferred box-sizing value */
 *,
 *::before,

@@ -10,6 +10,7 @@ import { useGSAP } from "@gsap/react";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FiArrowUpRight } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -74,39 +75,51 @@ const workExperience = [
 const caseStudies = [
   {
     id: 1,
-    title: "Tattoo Booking Platform",
-    category: "Web Development, UI/UX",
-    image: proxii_world_mockup,
-    link: "https://proxiiworld.netlify.app/",
-    client: "proxii_dream",
-  },
-  {
-    id: 2,
-    title: "Dashboard UX and Research",
-    category: "UI/UX",
-    image: arctic_wolf_case,
-    link: "https://caseykoh.webflow.io/projects/arctic-wolf",
-    client: "Arctic Wolf",
-  },
-  {
-    id: 3,
-    title: "Studio Digital Content",
+    title: "Creative Studio Content Creation",
     category: "Social Media, Branding",
     image: sturesident_case,
+    link: "/creative-studio",
     client: "Zero Studio",
   },
   {
+    id: 2,
+    title: "Custom Web Design",
+    category: "Web Development, UI/UX",
+    image: proxii_world_mockup,
+    link: "/custom-web",
+    client: "Freelance",
+  },
+  {
+    id: 3,
+    title: "Enterprise Dashboard UX",
+    category: "UI/UX",
+    image: arctic_wolf_case,
+    link: "/enterprise",
+    client: "Arctic Wolf",
+  },
+  {
     id: 4,
-    title: "Clothing Graphic Design",
+    title: "Augmented Reality Design",
+    category: "UI/UX",
+    image: arctic_wolf_case,
+    link: "/ar",
+    client: "Interaptix",
+  },
+
+  {
+    id: 5,
+    title: "Fashion Design & Production",
     category: "Graphic Design",
     image: mpod_case,
+    link: "/fashion",
     client: "MaybePerhapsOneDay",
   },
   {
-    id: 5,
-    title: "Digital Art Collection",
+    id: 6,
+    title: "Digital Artwork Showcase",
     category: "Illustration, Creative Direction",
     image: flash_case,
+    link: "/showcase",
     client: "Personal",
   },
 ];
@@ -189,11 +202,12 @@ const Home = () => {
                     animationDelay: `${index * 300}ms`,
                   }}
                 >
-                  <a
+                  <Link to={study.link} className="block w-full h-full">
+                    {/* <a
                     href={study.link}
                     className="block w-full h-full"
                     target="_blank"
-                  >
+                  > */}
                     <img
                       className="rounded object-cover w-full"
                       src={study.image}
@@ -210,7 +224,7 @@ const Home = () => {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               ))}
             </div>

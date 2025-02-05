@@ -42,6 +42,13 @@ function Freelance() {
               <CaseImage img="freelance/title.png" alt_text="Freelance" />
               <CaseImage img="freelance/gallery.png" alt_text="Freelance" />
               <CaseImage img="freelance/booking.png" alt_text="Freelance" />
+              <a
+                target="_blank"
+                className="underline text-sky-600"
+                href="https://proxiiworld.com/"
+              >
+                Go to site →
+              </a>
             </div>
           </section>
           <section>

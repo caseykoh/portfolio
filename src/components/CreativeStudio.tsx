@@ -33,6 +33,13 @@ function CreativeStudio() {
                   Adobe Photoshop, Illustrator, Procreate
                 </span>
               </p>
+              {/* <a
+                className="underline text-sky-200"
+                target="_blank"
+                href="https://www.instagram.com/000000000000_studio/"
+              >
+                Go to Instagram Account →
+              </a> */}
             </div>
           </div>
         </div>

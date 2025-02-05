@@ -43,6 +43,13 @@ function Mpod() {
             </div>
           </section>
           <section>
+            <div className="grid border p-3 border-white grid-cols-2 gap-2">
+              <CaseImage img="fashion/gologoblack.png" alt_text="fashion" />
+              <CaseImage img="fashion/darkshirt.png" alt_text="fashion" />
+              <CaseImage img="fashion/lightshirt.png" alt_text="fashion" />
+            </div>
+          </section>
+          <section>
             <div className="max-w-md border p-3 border-white flex flex-col gap-2 mb-8">
               <CaseImage img="fashion/perhapshat.jpg" alt_text="fashion" />
             </div>

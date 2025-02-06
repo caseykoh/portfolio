@@ -46,24 +46,6 @@ function CreativeStudio() {
         <div className="flex flex-col gap-y-10">
           <section>
             {/* <h2 className="text-left text-xl pb-4 text-slate-500">
-              Creative Studio Logo
-            </h2> */}
-            <div className="max-w-md border p-3 border-white flex flex-col gap-2">
-              <div className="max-w-36">
-                <CaseImage
-                  img="creative-studio/logo.png"
-                  alt_text="Creative studio"
-                />
-              </div>
-
-              <CaseImage
-                img="creative-studio/logo-banner.png"
-                alt_text="Creative studio"
-              />
-            </div>
-          </section>
-          <section>
-            {/* <h2 className="text-left text-xl pb-4 text-slate-500">
               Guest Features [Instagram]
             </h2> */}
             <div className="border p-3 border-white grid grid-cols-2 md:grid-cols-3 gap-2">
@@ -91,6 +73,28 @@ function CreativeStudio() {
                 img="creative-studio/guest6.png"
                 alt_text="Creative studio"
               />
+            </div>
+          </section>
+          <section className="flex gap-2 border border-white p-3 max-w-md">
+            {/* <h2 className="text-left text-xl pb-4 text-slate-500">
+              Creative Studio Logo
+            </h2> */}
+            <div className="max-w-md">
+              <video autoPlay muted loop playsInline>
+                <source
+                  src="assets/creative-studio/viper.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="max-w-md  flex flex-col gap-2">
+              <div className="max-w-24">
+                <CaseImage
+                  img="creative-studio/logo.png"
+                  alt_text="Creative studio"
+                />
+              </div>
             </div>
           </section>
           <section>

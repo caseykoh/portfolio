@@ -1,5 +1,5 @@
 import proxii_world_mockup from "../../assets/proxiiworld_mockup.png";
-import interaptix_case from "../../assets/interaptix-title.png";
+import interaptix_case from "../../assets/ar-title.png";
 import arctic_wolf_case from "../../assets/arcticwolf-title.png";
 import sturesident_case from "../../assets/sturesident.png";
 import flash_case from "../../assets/flash.png";

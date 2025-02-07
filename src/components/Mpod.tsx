@@ -3,7 +3,7 @@ import CaseImage from "./CaseImage";
 function Mpod() {
   return (
     <div className="min-w-full flex justify-center font-inter container min-h-screen px-10">
-      <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+      <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
         <div className="text-slate-50 max-w-md">
           <h1 className="text-left text-2xl pb-4 font-bold text-white">
             Fashion Branding and Design

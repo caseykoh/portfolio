@@ -4,7 +4,7 @@ function Interaptix() {
   return (
     <div className="min-w-full flex justify-center font-inter container min-h-screen px-10">
       <div className="flex flex-col">
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-bold text-white">
               Augmented Reality Design
@@ -41,7 +41,7 @@ function Interaptix() {
             </section>
           </div>
         </div>
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-medium text-white">
               AR UX/Product Research
@@ -73,7 +73,7 @@ function Interaptix() {
             </section>
           </div>
         </div>
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-medium text-white">
               Mobile AR Annotations
@@ -99,7 +99,7 @@ function Interaptix() {
             </section>
           </div>
         </div>
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-medium text-white">
               Mobile AR UX
@@ -125,11 +125,19 @@ function Interaptix() {
                     alt_text="AR UI UX"
                   />
                   <CaseImage
+                    img="interaptix/mobile-fully-scanned.png"
+                    alt_text="AR UI UX"
+                  />
+
+                  <CaseImage
                     img="interaptix/mobile-ui-versions.png"
                     alt_text="AR UI UX"
                   />
                 </div>
-
+                <CaseImage
+                  img="interaptix/mobile-line-up.png"
+                  alt_text="AR UI UX"
+                />
                 <CaseImage
                   img="interaptix/mobile-flow.png"
                   alt_text="AR UI UX"
@@ -138,7 +146,7 @@ function Interaptix() {
             </section>
           </div>
         </div>
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-medium text-white">
               Desktop UI
@@ -164,7 +172,7 @@ function Interaptix() {
             </section>
           </div>
         </div>
-        <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+        <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
           <div className="text-slate-50 max-w-md">
             <h1 className="text-left text-2xl pb-4 font-medium text-white">
               Onboarding Emails

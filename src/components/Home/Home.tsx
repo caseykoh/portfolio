@@ -1,5 +1,6 @@
 import proxii_world_mockup from "../../assets/proxiiworld_mockup.png";
-import arctic_wolf_case from "../../assets/arctic_wolf_case.png";
+import interaptix_case from "../../assets/interaptix-title.png";
+import arctic_wolf_case from "../../assets/arcticwolf-title.png";
 import sturesident_case from "../../assets/sturesident.png";
 import flash_case from "../../assets/flash.png";
 import mpod_case from "../../assets/mpod.jpeg";
@@ -101,7 +102,7 @@ const caseStudies = [
     id: 4,
     title: "Augmented Reality Design",
     category: "UI/UX",
-    image: arctic_wolf_case,
+    image: interaptix_case,
     link: "/ar",
     client: "Interaptix",
   },
@@ -180,7 +181,7 @@ const Home = () => {
           <img src={seashell} alt="Casey Koh" className="mix-blend-screen" />
         </div>
         <div className="max-w-4xl">
-          <section className="max-w-md max-h-[65vh] pt-[12rem] pb-2 flex justify-between flex-col">
+          <section className="max-w-md max-h-[65vh] pt-[12rem] flex justify-between flex-col">
             <div>
               <div ref={bio} className="origin-top-left">
                 <h1 className="text-xl text-blue-400 mix-blend-screen">
@@ -189,7 +190,7 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <section ref={bodySection} className="py-8">
+          <section ref={bodySection} className="py-6">
             <div
               id="workSection"
               className="py-4 grid md:grid-cols-2 gap-x-6 gap-y-10 grid-cols-1"
@@ -197,7 +198,7 @@ const Home = () => {
               {caseStudies.map((study, index) => (
                 <div
                   key={study.id}
-                  className="aspect-[1/1] cursor-pointer group bg-blue-400 overflow-hidden rounded-lg shadow-lg  transform transition-all opacity-0 duration-500 animate-slideFadeIn"
+                  className="aspect-[1/1] cursor-pointer group bg-gray-700/30 overflow-hidden rounded-lg shadow-lg  transform transition-all opacity-0 duration-500 animate-slideFadeIn"
                   style={{
                     animationDelay: `${index * 300}ms`,
                   }}

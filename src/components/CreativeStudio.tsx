@@ -3,10 +3,10 @@ import CaseImage from "./CaseImage";
 function CreativeStudio() {
   return (
     <div className="min-w-full flex justify-center font-inter container min-h-screen px-10">
-      <div className="py-16 grid grid-cols-[1fr_3fr] gap-32">
+      <div className="py-16 grid lg:grid-cols-[1fr_3fr] gap-32">
         <div className="text-slate-50 max-w-md">
           <h1 className="text-left text-2xl pb-4 font-bold text-white">
-            Creative Studio Content Creation
+            Creative Studio Media
           </h1>
           <div className="flex flex-col gap-2">
             <p>
@@ -75,26 +75,36 @@ function CreativeStudio() {
               />
             </div>
           </section>
-          <section className="flex gap-2 border border-white p-3 max-w-md">
-            {/* <h2 className="text-left text-xl pb-4 text-slate-500">
-              Creative Studio Logo
-            </h2> */}
-            <div className="max-w-md">
-              <video autoPlay muted loop playsInline>
+          <section className="flex gap-2 border border-white p-3">
+            <div className="flex items-center">
+              <video
+                className="max-h-[600px] w-auto"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
+                <source
+                  src="assets/creative-studio/popup-visuals.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="flex items-center">
+              <video
+                className="max-h-[600px] w-auto"
+                autoPlay
+                muted
+                loop
+                playsInline
+              >
                 <source
                   src="assets/creative-studio/viper.mp4"
                   type="video/mp4"
                 />
                 Your browser does not support the video tag.
               </video>
-            </div>
-            <div className="max-w-md  flex flex-col gap-2">
-              <div className="max-w-24">
-                <CaseImage
-                  img="creative-studio/logo.png"
-                  alt_text="Creative studio"
-                />
-              </div>
             </div>
           </section>
           <section>
@@ -108,6 +118,39 @@ function CreativeStudio() {
               />
               <CaseImage
                 img="creative-studio/sturesidentinfo.png"
+                alt_text="Creative studio"
+              />
+            </div>
+          </section>
+          <section>
+            <div className="border p-3 border-white grid grid-cols-3 gap-2 mb-8">
+              <CaseImage
+                img="creative-studio/popup-back-duo-2.jpg"
+                alt_text="Creative studio"
+              />
+              <CaseImage
+                img="creative-studio/popup-process.jpg"
+                alt_text="Creative studio"
+              />
+
+              <CaseImage
+                img="creative-studio/popup-back-duo.jpg"
+                alt_text="Creative studio"
+              />
+
+              <CaseImage
+                img="creative-studio/popup-final-back.jpg"
+                alt_text="Creative studio"
+              />
+
+              <div className="opacity-50">
+                <CaseImage
+                  img="creative-studio/popup-mockup.png"
+                  alt_text="Creative studio"
+                />
+              </div>
+              <CaseImage
+                img="creative-studio/popup-single-back.jpg"
                 alt_text="Creative studio"
               />
             </div>

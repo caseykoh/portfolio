@@ -85,7 +85,7 @@ const caseStudies = [
   {
     id: 2,
     title: "Custom Web Design",
-    category: "Web Development, UI/UX",
+    category: "Web Development, UI/UX Design",
     image: proxii_world_mockup,
     link: "/custom-web",
     client: "Freelance",
@@ -93,7 +93,7 @@ const caseStudies = [
   {
     id: 3,
     title: "Enterprise Dashboard UX",
-    category: "UI/UX",
+    category: "UX Research",
     image: arctic_wolf_case,
     link: "/enterprise",
     client: "Arctic Wolf",
@@ -101,7 +101,7 @@ const caseStudies = [
   {
     id: 4,
     title: "Augmented Reality Design",
-    category: "UI/UX",
+    category: "UI/UX Design",
     image: interaptix_case,
     link: "/ar",
     client: "Interaptix",

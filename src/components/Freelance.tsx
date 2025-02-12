@@ -10,18 +10,17 @@ function Freelance() {
           </h1>
           <div className="flex flex-col gap-2">
             <p>
-              Designed and developed promotional digital content for Zero
-              Studio, focusing on Instagram and TikTok campaigns.
+              I designed and developed custom web solutions for artists and
+              businesses, translating each client's unique creative identity
+              into web experiences.
             </p>
             <p>
-              Created visually engaging posts to attract new resident artists,
-              promote guest artists, design logos, and advertise flash events
-              and pop-ups.
+              For proxii_dream, I created a custom CMS application to allow easy
+              flash uploading, and appointment management.
             </p>
             <p>
-              Collaborated with the team to develop content that strengthened
-              the studio's brand presence and engaged a dynamic audience across
-              social media platforms.
+              Mobile experiences were heavily prioritized, optimizing for
+              Instagram-to-web conversions.
             </p>
             <div className="text-blue-200">
               <p>
@@ -30,7 +29,7 @@ function Freelance() {
               <p>
                 Tools:{" "}
                 <span className="text-blue-50">
-                  HTML/CSS, Figma, JavaScript
+                  HTML/CSS, Figma, JavaScript, React, Node.js
                 </span>
               </p>
             </div>

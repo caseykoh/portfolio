@@ -15,8 +15,7 @@ function CreativeStudio() {
             </p>
             <p>
               Created visually engaging posts to attract new resident artists,
-              promote guest artists, design logos, and advertise flash events
-              and pop-ups.
+              promote guest artists and advertise flash events and pop-ups.
             </p>
             <p>
               Collaborated with the team to develop content that strengthened
@@ -30,7 +29,8 @@ function CreativeStudio() {
               <p>
                 Tools:{" "}
                 <span className="text-blue-50">
-                  Adobe Photoshop, Illustrator, Procreate
+                  Adobe Photoshop, Illustrator, Procreate, Instagram, TikTok,
+                  CapCut
                 </span>
               </p>
               {/* <a

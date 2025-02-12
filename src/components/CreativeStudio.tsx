@@ -24,6 +24,9 @@ function CreativeStudio() {
             </p>
             <div className="text-blue-200">
               <p>
+                Client: <span className="text-blue-50">Zero Studio</span>
+              </p>
+              <p>
                 Year: <span className="text-blue-50">2023-2024</span>
               </p>
               <p>

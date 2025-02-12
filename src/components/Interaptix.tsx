@@ -18,17 +18,17 @@ function Interaptix() {
                 Tested and demonstrated working prototypes for mobile and web
                 platforms.
               </p>
-              <p>
-                Collaborated with the team to develop content that strengthened
-                the studio's brand presence and engaged a dynamic audience
-                across social media platforms.
-              </p>
+              <p>Established design language for AR and web platform.</p>
               <div className="text-blue-200">
+                <p>
+                  Co-op: <span className="text-blue-50">Interaptix</span>
+                </p>
                 <p>
                   Year: <span className="text-blue-50">2021</span>
                 </p>
                 <p>
-                  Tools: <span className="text-blue-50">Figma, Miro</span>
+                  Tools:{" "}
+                  <span className="text-blue-50">Figma, Miro, ARKit, </span>
                 </p>
               </div>
             </div>

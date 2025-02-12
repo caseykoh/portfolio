@@ -24,6 +24,10 @@ function Freelance() {
             </p>
             <div className="text-blue-200">
               <p>
+                Clients:{" "}
+                <span className="text-blue-50">proxii_dream, Hayden Koh</span>
+              </p>
+              <p>
                 Year: <span className="text-blue-50">2023-2025</span>
               </p>
               <p>

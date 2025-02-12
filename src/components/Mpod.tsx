@@ -10,22 +10,26 @@ function Mpod() {
           </h1>
           <div className="flex flex-col gap-2">
             <p>
-              Designed and developed promotional digital content for Zero
-              Studio, focusing on Instagram and TikTok campaigns.
+              Designed graphics and illustrations for a bold and dynamic
+              streetwear brand, bringing its vision to life through striking
+              visual storytelling.
             </p>
             <p>
-              Created visually engaging posts to attract new resident artists,
-              promote guest artists, design logos, and advertise flash events
-              and pop-ups.
+              Created mockups and prepared production-ready files for engraving,
+              embroidery, and screen printing, ensuring seamless execution
+              across various materials and textures.
             </p>
             <p>
-              Collaborated with the team to develop content that strengthened
-              the studio's brand presence and engaged a dynamic audience across
-              social media platforms.
+              Developed a cohesive brand aesthetic that resonated with the
+              streetwear community, enhancing the collection’s impact and
+              appeal.
             </p>
             <div className="text-blue-200">
               <p>
-                Year: <span className="text-blue-50">2023</span>
+                Client: <span className="text-blue-50">MaybePerhapsOneDay</span>
+              </p>
+              <p>
+                Year: <span className="text-blue-50">2023-2024</span>
               </p>
               <p>
                 Tools:{" "}
